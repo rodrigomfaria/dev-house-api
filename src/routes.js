@@ -12,5 +12,6 @@ routes.post('/sessions', SessionController.store);
 routes.post('/houses', upload.single('tumbmail'), HouseController.store);
 routes.get('/houses', HouseController.index);
 routes.put('/houses/:house_id', upload.single('tumbmail'), HouseController.update);
+routes.delete('/houses', HouseController.destroy);
 
 export default routes;
